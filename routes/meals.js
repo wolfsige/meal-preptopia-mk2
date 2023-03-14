@@ -1,5 +1,7 @@
 import { Router } from 'express'
 import { get } from 'mongoose'
+import * as mealsCtrl from '../controllers/meals.js'
+
 
 const router = Router()
 
@@ -9,6 +11,6 @@ router.get('/', function(req, res) {
 })
 
 // GET /meals/new
-router.get('/new', mealCtrl.new)
+router.get('/new', mealsCtrl.new)
 
 export { router }
