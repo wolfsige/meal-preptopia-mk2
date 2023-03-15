@@ -10,7 +10,10 @@ router.get('/', function(req, res) {
   res.send('respond with a resource')
 })
 
-// GET /meals/new
+// GET
 router.get('/new', mealsCtrl.new)
+
+// POST
+router.post('/', mealsCtrl.create)
 
 export { router }
