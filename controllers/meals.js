@@ -14,21 +14,27 @@ function create(req, res){
   }
 
   const meal = new Meal(req.body)
-  // meal.save(function(err) {
-	// 	if (err) return res.redirect('/meals/new')
-  //   res.redirect('/meals/new')
-  // })
 
   meal.save()
     .then(item => {
-      res.redirect('/meals/new')
+      res.redirect('/meals/index')
     })
     .catch(err => {
       res.status(400).send("unable to save to database")
     })
 }
 
+function index(req, res) {
+  Meal.find({})
+  .then(meals => {
+    res.render("meals/index", {
+      meals
+    })
+  })
+}
+
 export {
   newMeal as new,
-  create
+  create,
+  index
 }

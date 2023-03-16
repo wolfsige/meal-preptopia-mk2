@@ -12,6 +12,7 @@ router.get('/', function(req, res) {
 
 // GET
 router.get('/new', mealsCtrl.new)
+router.get('/index', mealsCtrl.index)
 
 // POST
 router.post('/', mealsCtrl.create)
