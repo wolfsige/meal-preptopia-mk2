@@ -3,25 +3,25 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h3>Enter a New Meal</h3>
+  <h1>Enter a New Meal</h1>
   <form id="new-form" action="/meals" method="POST">
-    <label>Title:
-      <input type="text" name="title">
+    <label for="title-input">Title:
+      <input type="text" name="title" id="title-input">
     </label><br>
-    <label>Cook Time:
-      <input type="text" name="cookTime">
+    <label for="cook-time-input">Cook Time:
+      <input type="text" name="cook-time" id="cook-time-input">
     </label><br>
-    <label>Ingredients (separate actors with commas):
-      <input type="text" name="ingredient">
+    <label for="ingredient-input">Ingredients (separate actors with commas):
+      <input type="text" name="ingredient" id="ingredient-input">
     </label><br>
-    <label>Guide:
-      <input type="text" name="guide">
+    <label for="guide-input">Guide:
+      <input type="text" name="guide" id="guide-input">
     </label><br>
-    <label>Vegan:
-      <input type="checkbox" name="vegan" unchecked>
+    <label for="vegan-checkbock">Vegan:
+      <input type="checkbox" name="vegan" unchecked id="vegan-checkbox">
     </label><br>
-    <label>Vegetarian:
-      <input type="checkbox" name="vegetarian" unchecked>
+    <label for="vegetarian-checkbox">Vegetarian:
+      <input type="checkbox" name="vegetarian" unchecked id="vegetarian-checkbox">
     </label><br>
     <button type="submit">Add Meal</button>
   </form>
