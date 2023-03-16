@@ -3,8 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <h3>Enter a New Movie</h3>
+  <h3>Enter a New Meal</h3>
   <form id="new-form" action="/meals" method="POST">
     <label>Title:
       <input type="text" name="title">
@@ -19,10 +18,10 @@
       <input type="text" name="guide">
     </label><br>
     <label>Vegan:
-      <input type="checkbox" name="vegan" checked>
+      <input type="checkbox" name="vegan" unchecked>
     </label><br>
     <label>Vegetarian:
-      <input type="checkbox" name="vegetarian" checked>
+      <input type="checkbox" name="vegetarian" unchecked>
     </label><br>
     <button type="submit">Add Meal</button>
   </form>
