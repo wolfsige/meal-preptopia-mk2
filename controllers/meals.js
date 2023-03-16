@@ -25,7 +25,7 @@ function create(req, res){
       res.redirect('/meals/index')
     })
     .catch(err => {
-      res.status(400).send("unable to save to database")
+      if (err) return res.render('meals/new')
     })
 }
 
