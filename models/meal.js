@@ -4,12 +4,18 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 	
 const mealSchema = new Schema({
-  title: String,
-  cookTime: Number,
-  ingredient: [String],
+  title: {
+    type: String,
+    required: true
+  },
+  cookTime: {type: Number, default: 45},
+  ingredient: {
+    type: [String],
+    required: true
+  },
   guide: [String],
-  vegan: Boolean,
-  vegetarian: Boolean,
+  vegan: {type: Boolean, default: false},
+  vegetarian: {type: Boolean, default: false},
 })
 
 const Meal = mongoose.model('Meal', mealSchema)

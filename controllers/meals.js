@@ -13,6 +13,11 @@ function create(req, res){
     req.body.ingredient = req.body.ingredient.split(', ')
   }
 
+  // remove empty properties
+  for (let key in req.body) {
+	  if (req.body[key] === '') delete req.body[key]
+	}
+
   const meal = new Meal(req.body)
 
   meal.save()
