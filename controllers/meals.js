@@ -41,8 +41,24 @@ function index(req, res) {
   })
 }
 
+function show(req, res){
+  Meal.findById(req.params.id)
+  .then( meal => {
+    res.render('meals/show', {
+      title: 'Meal Detail',
+      meal: meal
+    })
+  })
+}
+
+function deleteMeal(req, res){
+  console.log("YEET!")
+}
+
 export {
   newMeal as new,
   create,
-  index
+  index,
+  show,
+  deleteMeal as delete
 }

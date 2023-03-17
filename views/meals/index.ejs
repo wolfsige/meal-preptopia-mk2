@@ -20,7 +20,11 @@
           <td><%= meal.vegan ?  "Yes" : "No"%></td>
           <td><%= meal.vegetarian ?  "Yes" : "No" %></td>
           <td><a href="/meals/<%= meal._id %>">DETAILS</a></td>
-          </form>
+          <td>
+            <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST">
+              <button>X</button>
+            </form>
+          </td>
         </tr>
       <%})%>
     </tbody>
