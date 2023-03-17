@@ -52,7 +52,10 @@ function show(req, res){
 }
 
 function deleteMeal(req, res){
-  console.log("YEET!")
+  Meal.findByIdAndDelete(req.params.id)
+  .then(meal => {
+    res.redirect('/meals/index')
+  })
 }
 
 export {
