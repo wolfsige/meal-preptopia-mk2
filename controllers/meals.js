@@ -1,7 +1,9 @@
 import { Meal } from '../models/meal.js'
 
 function newMeal(req, res) {
-  res.render('meals/new')
+  res.render('meals/new', {
+    title: "Add Meal"
+  })
 }
 
 function create(req, res){
@@ -33,7 +35,8 @@ function index(req, res) {
   Meal.find({})
   .then(meals => {
     res.render("meals/index", {
-      meals
+      meals: meals,
+      title: "All Meals"
     })
   })
 }

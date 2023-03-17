@@ -3,7 +3,8 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Enter a New Meal</h1>
+  <h1><%= title %></h1>
+  <h3>Enter a New Meal</h3>
   <form id="new-form" action="/meals" method="POST">
     <label for="title-input">Title:
       <input type="text" name="title" id="title-input">
