@@ -23,11 +23,13 @@ function create(req, res){
   const meal = new Meal(req.body)
 
   meal.save()
-    .then(item => {
-      res.redirect('/meals/index')
-    })
-    .catch(err => {
-      if (err) return res.render('meals/new')
+  .then(item => {
+    res.redirect('/meals/index')
+  })
+  .catch(err => {
+      if (err) return res.render('meals/new', {
+        title: "Add Meal"
+      })
     })
 }
 
@@ -58,10 +60,32 @@ function deleteMeal(req, res){
   })
 }
 
+function edit(req,res){
+  Meal.findById(req.params.id)
+  .then(meal => {
+    res.render('meals/edit', {
+      meal: meal,
+      title: "Edit Meal"
+    })
+  })
+}
+
+function update(req, res){
+  for (let key in req.body) {
+    if(req.body[key] === '') delete req.body[key]
+  }
+  Meal.findByIdAndUpdate(req.params.id, req.body)
+  .then(meal => {
+    res.redirect(`/meals/${meal._id}`)
+  })
+}
+
 export {
   newMeal as new,
   create,
   index,
   show,
-  deleteMeal as delete
+  deleteMeal as delete,
+  edit,
+  update
 }

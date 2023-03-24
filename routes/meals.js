@@ -14,11 +14,15 @@ router.get('/', function(req, res) {
 router.get('/new', mealsCtrl.new)
 router.get('/index', mealsCtrl.index)
 router.get('/:id', mealsCtrl.show)
+router.get("/:id/edit", mealsCtrl.edit)
 
 // POST
 router.post('/', mealsCtrl.create)
 
 // DELETE
 router.delete('/:id', mealsCtrl.delete)
+
+// PUT
+router.put("/:id", mealsCtrl.update)
 
 export { router }

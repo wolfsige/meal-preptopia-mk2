@@ -8,7 +8,10 @@ const mealSchema = new Schema({
     type: String,
     required: true
   },
-  cookTime: {type: Number, default: 45},
+  cookTime: {
+    type: Number,
+    default: 45
+  },
   ingredient: {
     type: [String],
     required: true
