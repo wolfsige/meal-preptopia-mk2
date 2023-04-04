@@ -19,8 +19,14 @@ const mealSchema = new Schema({
   guide: {
     type: [String],
   },
-  vegan: {type: Boolean, default: false},
-  vegetarian: {type: Boolean, default: false},
+  vegan: {
+    type: Boolean, 
+    default: false
+  },
+  vegetarian: {
+    type: Boolean, 
+    default: false
+  },
 })
 
 const Meal = mongoose.model('Meal', mealSchema)
