@@ -5,23 +5,33 @@
 <main>
   <h1><%= title %></h1>
   <section>
-    <div>Title: </div>
-    <div>
+    <div>Title:
       <%= meal.title %>
       <a href="/meals/<%= meal._id %>/edit">
         <button>Edit Meal</button>
       </a>
     </div>
-    <div>Cook Time: </div>
-    <div><%= meal.cookTime %> minutes</div> 
+
+    <div>
+      Cook Time: <%= meal.cookTime %> 
+      min. Vegan: <%= meal.vegan ? 'Yes' : 'No' %> 
+      Vegetarian: <%= meal.vegetarian ? 'Yes' : 'No' %>
+    </div>
+
     <div>Ingredients: </div>
-    <div><%= meal.ingredient.join(', ') %></div>
+    
+    <% for (let i = 0; i < meal.ingredient.length; i++) { %>
+      
+      <%= meal.ingredient[i] %></br>
+
+    <% } %>
+    
     <div>Guide: </div>
-    <div><%= meal.guide %></div>
-    <div>Vegan: </div>
-    <div><%= meal.vegan ? 'Yes' : 'No' %></div>
-    <div>Vegetarian: </div>
-    <div><%= meal.vegetarian ? 'Yes' : 'No' %></div>
+    <% for (let i = 0; i < meal.guide.length; i++) { %>
+      
+      <%= meal.guide[i] %></br>
+
+    <% } %>
   </section>
 </main>
   

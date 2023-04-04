@@ -16,7 +16,9 @@ const mealSchema = new Schema({
     type: [String],
     required: true
   },
-  guide: [String],
+  guide: {
+    type: [String],
+  },
   vegan: {type: Boolean, default: false},
   vegetarian: {type: Boolean, default: false},
 })
