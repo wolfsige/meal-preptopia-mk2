@@ -1,0 +1,22 @@
+.top-show{
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.headline{
+  padding-bottom: 17px;
+  padding-top: 17px;
+  border-bottom: 1px solid;
+}
