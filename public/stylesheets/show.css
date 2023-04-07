@@ -1,6 +1,17 @@
-body {
+body::before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   background-image: url("../imgs/watercolor-checks.jpg");
+  opacity: .6;
   
+}
+
+main {
+  position: relative;
 }
 
 .top-show{
@@ -23,5 +34,4 @@ ul {
 div.headline{
   padding-bottom: 17px;
   padding-top: 17px;
-  border-bottom: 1px solid;
 }
