@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 body::before{
   content: '';
   position: absolute;
@@ -17,6 +21,7 @@ main {
 .top-show{
   margin: 0;
   text-align: center;
+  
 }
 
 li {
@@ -29,9 +34,38 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin: 10px;
+  color: white;
+  background-color: #464555;
+  border-radius: 5px;
+
 }
 
 div.headline{
   padding-bottom: 17px;
   padding-top: 17px;
+}
+
+.ingredients{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 70px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #B39190;
+}
+
+.card:hover{
+  background-color: #EBC7C6;
+  transition: .3s;
 }

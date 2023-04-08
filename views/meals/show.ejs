@@ -21,14 +21,15 @@
       </ul>
       </div>
   </container>
-    <div>Ingredients: </div>
-    
+  <h1>Ingredients: </h1>
+  
+  <container class="ingredients">
     <% for (let i = 0; i < meal.ingredient.length; i++) { %>
-      
-      <%= meal.ingredient[i] %></br>
-
+      <div class="card">
+        <%= meal.ingredient[i] %></br>
+      </div>
     <% } %>
-    
+  </container>
     <div>Guide: </div>
     <% for (let i = 0; i < meal.guide.length; i++) { %>
       
