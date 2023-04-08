@@ -25,9 +25,12 @@
   
   <container class="ingredients">
     <% for (let i = 0; i < meal.ingredient.length; i++) { %>
+
       <div class="card">
+        <input type="checkbox" class="checkbox">
         <%= meal.ingredient[i] %></br>
       </div>
+
     <% } %>
   </container>
     <div>Guide: </div>
