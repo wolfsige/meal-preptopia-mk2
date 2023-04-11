@@ -1,27 +1,15 @@
 body {
   margin: 0;
-}
-
-body::before{
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  height: 100%;
   background-image: url("../imgs/watercolor-checks.jpg");
-  opacity: .6;
-  
 }
 
 main {
   position: relative;
 }
 
-.top-show{
+h1, h2 {
   margin: 0;
-  text-align: center;
-  
 }
 
 li {
@@ -38,15 +26,44 @@ ul {
   color: white;
   background-color: #464555;
   border-radius: 5px;
-
+  padding: 0;
 }
 
-div.headline{
+.meal-name{
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.meal-name, .meal-name2, .meal-name3, .top-show {
+  position: relative;
+}
+
+.meal-div::before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #CFCEDF;
+  opacity: .6;
+  border-radius: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+
+.top-show{
+  margin: 0;
+  text-align: center;
+}
+
+.headline{
   padding-bottom: 17px;
   padding-top: 17px;
 }
 
-.ingredients{
+.ingredients, .guide {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -71,7 +88,7 @@ div.headline{
 }
 
 .checkbox {
-  margin-right: 10px;
+  cursor: pointer;
   width: 20px;
   height: 20px;
   border-radius: 100%;

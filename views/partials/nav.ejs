@@ -1,9 +1,12 @@
 <link rel="stylesheet" href="/stylesheets/nav.css">
 </head>
 <body>
-  <nav>
-    <a 
+  <nav class="navbar">
+    <div class="title">
+    <%= (typeof title != "undefined" ? title : "") %>
+  </div>
+    <a class="nav-item"
       href="/meals/new">ADD Meals</a>
-    <a 
+    <a class="nav-item"
       href="/meals/index">ALL Meals</a>
   </nav>

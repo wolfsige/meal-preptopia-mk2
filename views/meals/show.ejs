@@ -3,24 +3,25 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  
   <section>
     <container class="top-show">
-      <div>Title:
-        <%= meal.title %>
-        <a href="/meals/<%= meal._id %>/edit">
-          <button>Edit Meal</button>
+      <div class="meal-div">
+        <h1 class="meal-name">Meal Name:</h1>
+        <h2 class="meal-name2"><%= meal.title %></h2></br>
+        <a class="meal-name3" href="/meals/<%= meal._id %>/edit">
+          <button class="edit-btn">Edit Meal</button>
         </a>
       </div>
+    </container>
 
       <div class="headline">
         <ul>
-          <li>Cook Time: <%= meal.cookTime %></li>
-          <li>min. Vegan: <%= meal.vegan ? 'Yes' : 'No' %></li>
-          <li>Vegetarian: <%= meal.vegetarian ? 'Yes' : 'No' %></li>
+            <li><h2>Cook Time: <%= meal.cookTime %> min.</h2></li>
+            <li><h2>Vegan: <%= meal.vegan ? 'Yes' : 'No' %></h2></li>
+            <li><h2>Vegetarian: <%= meal.vegetarian ? 'Yes' : 'No' %></h2></li>
       </ul>
       </div>
-  </container>
   <h1>Ingredients: </h1>
   
   <container class="ingredients">
@@ -30,15 +31,20 @@
         <input type="checkbox" class="checkbox">
         <%= meal.ingredient[i] %></br>
       </div>
-
-    <% } %>
-  </container>
-    <div>Guide: </div>
-    <% for (let i = 0; i < meal.guide.length; i++) { %>
       
-      <%= meal.guide[i] %></br>
+      <% } %>
+    </container>
+    <h1>Guide: </h1>
+    <container class="guide">
+      <% for (let i = 0; i < meal.guide.length; i++) { %>
+        
+        <div class="card">
+          <input type="checkbox" class="checkbox">
+          <%= meal.guide[i] %></br>
+        </div>
 
-    <% } %>
+      <% } %>
+    </container>
   </section>
 </main>
   
