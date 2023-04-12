@@ -22,7 +22,7 @@
             <li><h2>Vegetarian: <%= meal.vegetarian ? 'Yes' : 'No' %></h2></li>
       </ul>
       </div>
-  <h1>Ingredients: </h1>
+  <h1 class="padded-h1">Ingredients: </h1>
   
   <container class="ingredients">
     <% for (let i = 0; i < meal.ingredient.length; i++) { %>
@@ -34,13 +34,17 @@
       
       <% } %>
     </container>
-    <h1>Guide: </h1>
+
+    <h1 class="padded-h1">Guide: </h1>
+
     <container class="guide">
       <% for (let i = 0; i < meal.guide.length; i++) { %>
         
         <div class="card">
           <input type="checkbox" class="checkbox">
-          <%= meal.guide[i] %></br>
+          <div class="guide-content">
+            <%= meal.guide[i] %></br>
+          </div>
         </div>
 
       <% } %>
