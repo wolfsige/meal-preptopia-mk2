@@ -29,33 +29,52 @@ ul {
   padding: 0;
 }
 
-.meal-name{
-  margin-top: 10px;
-  border-radius: 5px;
+a {
+  text-decoration: none;
 }
 
-.meal-name, .meal-name2, .meal-name3, .top-show {
-  position: relative;
+.meal-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.top-show{
+.edit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00C6C3;
+  color: black;
+  height: 40px;
+  width: 100px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+.edit-btn:hover {
+  background-color: #7FD1AE;
+  transition: .4s;
+}
+
+.top-show {
   margin: 0;
   text-align: center;
 }
 
-.headline{
-  padding-bottom: 17px;
-  padding-top: 17px;
+.headline {
+  margin-bottom: 17px;
+  margin-top: 17px;
 }
 
 .ingredients, .guide {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,7 +90,7 @@ ul {
   padding: 10px 10px 10px 50px;
 }
 
-.card:hover{
+.card:hover {
   background-color: #EBC7C6;
   color: black;
   transition: .3s;
@@ -86,26 +105,63 @@ ul {
   border-radius: 100%;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 639px){
   .padded-h1 {
-    padding-left: 100px;
+    margin-left: 100px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 640px){
   .padded-h1 {
-    padding-left: 350px;
+    margin-left: 100px;
   }
 }
 
-@media (min-width: 1600px){
+@media (min-width: 1100px){
   .padded-h1 {
-    padding-left: 625px;
+    margin-left: 230px;
   }
 }
 
-@media (min-width: 2000px){
+@media (min-width: 1500px){
   .padded-h1 {
-    padding-left: 800px;
+    margin-left: 400px;
+  }
+}
+
+@media (min-width: 1700px){
+  .padded-h1 {
+    margin-left: 600px;
+  }
+}
+
+@media (max-width: 280px){
+  .padded-h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 240px;
+  }
+
+  .checkbox {
+    margin-right: 190px;
   }
 }
