@@ -76,6 +76,12 @@ function edit(req,res){
 }
 
 function update(req, res){
+
+  if (req.body.ingredient) {
+		// remove whitespace next to commas
+    req.body.ingredient = req.body.ingredient.split(',')
+  }
+  
   for (let key in req.body) {
     if(req.body[key] === '') delete req.body[key]
   }
