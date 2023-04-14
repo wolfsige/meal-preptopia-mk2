@@ -83,6 +83,7 @@ a {
   width: 300px;
   margin: 10px;
   border-radius: 15px;
+  border: black 2px solid;
   background-color: #B39190;
 }
 
