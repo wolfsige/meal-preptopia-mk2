@@ -14,7 +14,7 @@ function create(req, res){
 		// remove whitespace next to commas
     req.body.ingredient = req.body.ingredient.split(', ')
   }
-  
+
   if (req.body.guide) {
 		// remove whitespace next to commas
     req.body.guide = req.body.guide.split(', ')

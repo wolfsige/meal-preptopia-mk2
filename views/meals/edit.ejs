@@ -1,32 +1,47 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/meals/edit.css" />
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/edit.css">
 
 <main>
-  <h1><%= title %></h1>
   <form id="new-form" action="/meals/<%= meal._id %>?_method=PUT" method="POST">
-    <label for="title-input">Title:</label>
-    <input 
-      type="text" 
-      name="title" 
-      value="<%= meal.title %>" 
-      id="title-input"
-    >
-    <label for="ingredients">Ingredients</label>
-    <input 
-      type="text"
-      name="ingredient"
-      value="<%= meal.ingredient %>"
-      id="ingredient-input"
-    >
-    <label for="cookTime">Cook Time</label>
-    <input 
-      type="text"
-      name="cookTime"
-      value="<%= meal.cookTime %>"
-      id="cook-time-input"
-    >
-    <button type="submit">Save Meal</button>
+    <container>
+      <h1><%= title %></h1>
+      <div class="title-div">
+        <label for="title-input">Title:</label>
+
+        <input 
+          type="text" 
+          name="title" 
+          value="<%= meal.title %>" 
+          id="title-input"
+        >
+      </div>
+
+      <div class="cookTime-div">
+        <label for="cookTime">Cook Time</label>
+
+        <input 
+          type="text"
+          name="cookTime"
+          value="<%= meal.cookTime %>"
+          id="cook-time-input"
+        >
+      </div>
+
+      <div class="ingredients-div">
+        <label for="ingredients">Ingredients</label>
+        
+        <input 
+          type="text"
+          name="ingredient"
+          value="<%= meal.ingredient %>"
+          id="ingredient-input"
+        >
+      </div>
+
+      <button type="submit" class="save-btn">Save Meal</button>
+    </container>
   </form>
 </main>
 
