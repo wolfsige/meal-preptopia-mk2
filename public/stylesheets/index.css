@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-image: url("../imgs/watercolor-checks.jpg");
+}
+
+h1 {
+  font-size:xx-large
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #B39190;
+  margin-top: 100px;
+  width: 450px;
+  height: 300px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: white;
+  transition: .4s;
+}
