@@ -3,29 +3,31 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <h3>Enter a New Meal</h3>
-  <form id="new-form" action="/meals" method="POST">
-    <label for="title-input">Title:
-      <input type="text" name="title" id="title-input">
-    </label><br>
-    <label for="cook-time-input">Cook Time:
-      <input type="text" name="cookTime" id="cook-time-input"> minutes
-    </label><br>
-    <label for="ingredient-input">Ingredients (separate actors with commas):
-      <input type="text" name="ingredient" id="ingredient-input">
-    </label><br>
-    <label for="guide-input">Guide:
-      <input type="text" name="guide" id="guide-input">
-    </label><br>
-    <label for="vegan-checkbock">Vegan:
-      <input type="checkbox" name="vegan" unchecked id="vegan-checkbox">
-    </label><br>
-    <label for="vegetarian-checkbox">Vegetarian:
-      <input type="checkbox" name="vegetarian" unchecked id="vegetarian-checkbox">
-    </label><br>
-    <button type="submit">Add Meal</button>
-  </form>
+  <container>
+    <h1><%= title %></h1>
+    <h3>Enter a New Meal</h3>
+    <form id="new-form" action="/meals" method="POST">
+      <label for="title-input">Title:
+        <input type="text" name="title" id="title-input">
+      </label><br>
+      <label for="cook-time-input">Cook Time:
+        <input type="text" name="cookTime" id="cook-time-input"> minutes
+      </label><br>
+      <label for="ingredient-input">Ingredients (separate actors with commas):
+        <input type="text" name="ingredient" id="ingredient-input">
+      </label><br>
+      <label for="guide-input">Guide:
+        <input type="text" name="guide" id="guide-input">
+      </label><br>
+      <label for="vegan-checkbock">Vegan:
+        <input type="checkbox" name="vegan" unchecked id="vegan-checkbox">
+      </label><br>
+      <label for="vegetarian-checkbox">Vegetarian:
+        <input type="checkbox" name="vegetarian" unchecked id="vegetarian-checkbox">
+      </label><br>
+      <button type="submit" class="add-btn">Add Meal</button>
+    </form>
+  </container>
   <a href="/">index</a>
 <main>
 

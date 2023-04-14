@@ -2,3 +2,37 @@ body {
   margin: 0;
   background-image: url("../imgs/watercolor-checks.jpg");
 }
+
+main, container, form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+container {
+  background-color: #B39190;
+  margin-top: 100px;
+  width: 480px;
+  height: 500px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00C6C3;
+  color: black;
+  height: 24px;
+  width: 85px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+.add-btn:hover {
+  background-color: #7FD1AE;
+  transition: .4s;
+}

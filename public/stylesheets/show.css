@@ -41,19 +41,19 @@ a {
   margin-top: 20px;
 }
 
-.edit-btn {
+.save-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #00C6C3;
   color: black;
-  height: 40px;
-  width: 100px;
+  height: 24px;
+  width: 85px;
   border-radius: 12px;
   border: black 2px solid;
 }
 
-.edit-btn:hover {
+.save-btn:hover {
   background-color: #7FD1AE;
   transition: .4s;
 }
