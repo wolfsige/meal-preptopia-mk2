@@ -44,7 +44,7 @@ container {
   transition: .4s;
 }
 
-@media (max-width: 281px){
+@media (max-width: 481px){
   container {
     width: 260px;
   }
