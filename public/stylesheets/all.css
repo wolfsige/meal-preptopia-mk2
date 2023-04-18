@@ -2,3 +2,134 @@ body {
   margin: 0;
   background-image: url("../imgs/watercolor-checks.jpg");
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: #B39190; */
+  margin-top: 100px;
+  width: 450px;
+  height: 300px;
+  /* border-radius: 12px;
+  border: black 2px solid; */
+}
+
+thead {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+tbody {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+a {
+  color: black;
+}
+
+table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  max-height: 100px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 15px;
+  border: black 2px solid;
+  background-color: #B39190;
+}
+
+td {
+  width: 80px;
+}
+
+form {
+  width: 45px;
+}
+
+h2 {
+  margin: 10px;
+  padding: 15px;
+  background-color: #B39190;
+  border: black 2px solid;
+  border-radius: 10px;
+}
+
+.div-h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.del-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  height: 24px;
+  width: 45px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+.del-btn:hover {
+  color: red;
+  background-color: white;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.del-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.details-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00C6C3;
+  color: black;
+  height: 24px;
+  width: 85px;
+  border-radius: 12px;
+  border: black 2px solid;
+}
+
+.details-btn:hover {
+  background-color: #7FD1AE;
+  transition: .4s;
+}
+
+.extras {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}

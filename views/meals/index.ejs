@@ -3,31 +3,58 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <table id="list">
-    <thead>
-      <tr>
-        <th>Title:</th>
-        <th>Vegan:</th>
-        <th>Vegetarian:</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%  meals.forEach(meal => { %>
-        <tr>
-          <td><%= meal.title %></td>
-          <td><%= meal.vegan ?  "Yes" : "No"%></td>
-          <td><%= meal.vegetarian ?  "Yes" : "No" %></td>
-          <td><a href="/meals/<%= meal._id %>">DETAILS</a></td>
-          <td>
-            <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST">
-              <button>X</button>
-            </form>
-          </td>
-        </tr>
-      <%})%>
-    </tbody>
-  </table>
+  <% if (meals.length > 0) { %>
+    <h1><%= title %></h1>
+    <div class="card">
+    <%  meals.forEach(meal => { %>
+          <table id="list">
+            <div class="head">
+              <thead>
+                <tr>
+                  <th>Title:</th>
+                </tr>
+                <tr>
+                  <th>Vegan:</th>
+                </tr>
+                <tr>
+                  <th>Vegetarian:</th>
+                </tr>
+              </thead>
+            </div>
+
+            <tbody>
+              <tr>
+                <td><%= meal.title %></td>
+              </tr>
+              <tr>
+                <td><%= meal.vegan ?  "Yes" : "No"%></td>
+              </tr>
+              <tr>
+                <td><%= meal.vegetarian ?  "Yes" : "No" %></td>
+              </tr>
+            </tbody>
+
+              <tbody class="extras">
+              <tr>
+                <td><a href="/meals/<%= meal._id %>" class="details-btn">DETAILS</a></td>
+              </tr>
+              <tr>
+                <td class="del-location">
+                  <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST">
+                    <button class="del-btn">X</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <%})%>
+      </div>
+
+  <% } else { %>
+    <div class="div-h2">
+      <h2>Uh oh. The meal bandit stole all of the recipes! Add more to the vault <a href="/meals/new">here</a>!</h2>
+    </div>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>
