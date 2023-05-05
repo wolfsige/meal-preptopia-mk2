@@ -1,13 +1,22 @@
 <link rel="stylesheet" href="/stylesheets/nav.css">
+<script src="/javascript/menu.mjs"></script>
+
 </head>
 <body>
   <nav class="navbar">
     <div class="title">
-    <%= (typeof title != "undefined" ? title : "") %>
-  </div>
-  <a class="nav-item"
-  href="/meals/new">ADD Meals</a>
-  <a class="nav-item"
-  href="/meals/index">ALL Meals</a>
-  <a href="/" class="nav-item">Home</a>
+      <%= (typeof title !="undefined" ? title : "" ) %>
+    </div>
+    <a href="#" class="toggle-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="/" class="nav-item">Home</a></li>
+        <li><a class="nav-item" href="/meals/new">ADD Meals</a></li>
+        <li><a class="nav-item" href="/meals/index">ALL Meals</a></li>
+      </ul>
+    </div>
   </nav>

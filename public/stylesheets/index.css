@@ -7,11 +7,6 @@ h1 {
   font-size:xx-large
 }
 
-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 container {
   display: flex;
@@ -26,11 +21,17 @@ container {
   border: black 2px solid;
 }
 
-a {
+a.card-link {
   color: black;
 }
 
-a:hover {
+a.card-link:hover {
   color: white;
   transition: .4s;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

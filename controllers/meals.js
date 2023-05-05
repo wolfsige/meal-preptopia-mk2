@@ -2,7 +2,7 @@ import { Meal } from '../models/meal.js'
 
 function newMeal(req, res) {
   res.render('meals/new', {
-    title: "Add Meal"
+    title: "Meal Preptopia"
   })
 }
 
@@ -33,7 +33,7 @@ function create(req, res){
   })
   .catch(err => {
       if (err) return res.render('meals/new', {
-        title: "Add Meal"
+        title: "Meal Preptopia"
       })
     })
 }
@@ -43,7 +43,7 @@ function index(req, res) {
   .then(meals => {
     res.render("meals/index", {
       meals: meals,
-      title: "All Meals"
+      title: "Meal Preptopia"
     })
   })
 }
@@ -52,7 +52,7 @@ function show(req, res){
   Meal.findById(req.params.id)
   .then( meal => {
     res.render('meals/show', {
-      title: 'Meal Detail',
+      title: 'Meal Preptopia',
       meal: meal
     })
   })
@@ -70,7 +70,7 @@ function edit(req,res){
   .then(meal => {
     res.render('meals/edit', {
       meal: meal,
-      title: "Edit Meal"
+      title: "Meal Preptopia"
     })
   })
 }
@@ -81,7 +81,7 @@ function update(req, res){
 		// remove whitespace next to commas
     req.body.ingredient = req.body.ingredient.split(',')
   }
-  
+
   for (let key in req.body) {
     if(req.body[key] === '') delete req.body[key]
   }
