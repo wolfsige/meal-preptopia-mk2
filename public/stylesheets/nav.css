@@ -34,7 +34,7 @@
 } 
 
 .navbar-links li:hover {
-  background-color: #555;
+  background-color: rgb(0, 0, 0);
 }
 
 .toggle-btn {
