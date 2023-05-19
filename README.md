@@ -5,9 +5,11 @@ Visit 🚀[Meal Preptopia](https://meal-preptopia.herokuapp.com/)
 ## Why?
 I've been getting more into cooking and wanted to build an app to store recipes in. This also doubles as a place where a few of my friends can share and save recipes more easily.
 
-![](https://imgur.com/a/VksiQGf)
-![](https://imgur.com/a/cBXU327)
-![](https://imgur.com/a/dDXJquT)
+![](https://imgur.com/IhbMXRn.jpg)
+
+![](https://imgur.com/wASVQPR.jpg)
+
+![](https://imgur.com/G09mhH3.jpg)
 
 ## 💾 Technologies:
 - node.js
