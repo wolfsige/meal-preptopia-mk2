@@ -23,5 +23,5 @@ I've been getting more into cooking and wanted to build an app to store recipes 
 - Seperate recipes that I have cooked before and ones I havent
 - Reviews
 
-
-<a href="https://www.wowpatterns.com/free-vector/watercolor-checks-vector-pattern">Wow Patterns</a>
+## Credits
+<a href="https://www.wowpatterns.com/free-vector/watercolor-checks-vector-pattern">Wow Patterns</a> was used for the background image
